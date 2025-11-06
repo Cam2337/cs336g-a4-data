@@ -1,6 +1,6 @@
 """Tokenize the Paloma dataset with the GPT2 tokenizer.
 
-Downlaod the Paloma dataset:
+Download the Paloma dataset:
 ```
 cd data/
 git lfs clone https://huggingface.co/datasets/allenai/paloma 
@@ -13,7 +13,6 @@ uv run python tools/tokenize/paloma.py \
     data/paloma/c4_100_domains/val/ \
     data/paloma_c4_100_domains_val.bin
 ```
-
 
 """
 
