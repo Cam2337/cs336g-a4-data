@@ -1,8 +1,17 @@
 """Tokenize the Paloma dataset with the GPT2 tokenizer.
 
-Example usage:
+Downlaod the Paloma dataset:
 ```
-uv run python tools/tokenize/paloma.py data/paloma/c4_100_domains/val/
+cd data/
+git lfs clone https://huggingface.co/datasets/allenai/paloma 
+cd ..
+```
+
+Tokenize with this script:
+```
+uv run python tools/tokenize/paloma.py \
+    data/paloma/c4_100_domains/val/ \
+    data/paloma_c4_100_domains_val.bin
 ```
 
 
