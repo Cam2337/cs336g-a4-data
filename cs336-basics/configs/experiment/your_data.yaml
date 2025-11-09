@@ -5,7 +5,7 @@ paths:
   train_bin: /data/c-nband/a1-basics/owt_train_gpt2_tok.bin
   
   # The validation set which we have already tokenized with GPT-2 tokenizer, don't change this!
-  valid_bin: /data/paloma/tokenized_paloma_c4_100_domains_validation.bin
+  valid_bin: ../data/paloma_c4_100_domains_val.bin
   
   model_output: output/your_data
 
