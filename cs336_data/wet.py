@@ -17,7 +17,7 @@ _SEED = 336
 
 
 def get_wet_file_urls() -> list[str]:
-    """Returns urls for all 5000 .wet.gz files that can be used in the assignment."""
+    """Returns urls for all 5000 .wet files that can be used in the assignment."""
     if not _PATHS_GZ.exists():
         raise RuntimeError("Can't load .wet file urls. Paths file does not exist!")
     with gzip.open(_PATHS_GZ) as raw_urls:
@@ -79,8 +79,8 @@ def open_wet_archive(wet_file: Path) -> Iterator[ArchiveIterator]:
 def open_wet_archive_url(wet_url: str) -> Iterator[ArchiveIterator]:
     """Context manager for an iterator over a downloadable .wet file.
 
-    This downloades the .wet file to a temporary directory. Upon exiting
-    the context, the temporary files are deleted again.
+    This downloads the .wet file to a temporary directory. Upon exiting
+    the context, the file and directory are deleted again.
 
     Usage:
     ```python
